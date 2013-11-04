@@ -3,6 +3,7 @@
 <head>
 	<title>Markit On Demand @ FinTech NYC</title>
 	<link rel="stylesheet" href="./Resources/bootstrap/bootstrap-2.3.2.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
 	<link rel="stylesheet" href="./Resources/header.css" />
 	<link rel="stylesheet" href="./Resources/footer.css" />
@@ -21,10 +22,26 @@
 
 	</script>
 	<style type="text/css">
-		.span12 p {
+		html,body,h1,h2,h3,h4,h5,h6,p{
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 300;
+		}
+		b,strong {
+			font-weight: 600;
+		}
+		.hero-unit {
+			padding-bottom: 0;
+		}
+		.span12 p,
+		.span12 ul.list li {
 			font-size: 18px;
 			font-weight: 200;
 			line-height: 30px;
+		}
+		.span12 h4 {
+			font-weight: 400;
+			font-size: 20px;
+			margin-top: 35px;
 		}
 	</style>
 </head>
@@ -43,39 +60,64 @@
 				<p>Find the docs at <a href="http://dev.markitondemand.com/">dev.markitondemand.com</a>. The available APIs are:</p>
 
 				<ul>
-					<li>Company/Symbol Lookup</li>
+					<li>Company / Symbol Lookup</li>
 					<li>Stock Quote</li>
-					<li>Credit Default Swaps</li>
-					<li>Interactive Chart</li>
+					<li>Sovereign Credit Default Swaps Daily Movers</li>
+					<li>Interactive Chart / Timeseries</li>
 				</ul>
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="span12">
-			<h3 class="page-header">Innovate</h3>
+			<h3 class="page-header">Create</h3>
 			<img src="./Resources/img/build.png" />
 		</div>
 		<div class="span12">
-			<h3 class="page-header">Build for F2</h3>
-			<p><img src="https://2.gravatar.com/avatar/4a9321787652abeea63089c8fdf0face?d=https%3A%2F%2Fidenticons.github.com%2Fa13d286b4b48bf7a029c2064cd40efaf.png&r=x&s=440" width="150" align="right" />F2 is an open and free web integration framework designed to help the financial services community develop custom web and mobile applications. <b>Build it once, deploy it to any F2-enabled site</b>.</p>
-			<h5>Get F2.js</h4>
-			<p><code>//cdnjs.cloudflare.com/ajax/libs/F2/1.3.0/f2.min.js</code></p>
-			<h4>Add code</h4>
+			<h3 class="page-header">Build Using F2</h3>
+			<p><a href="http://docs.openf2.org"><img src="./Resources/img/f2logo.png" width="150" align="right" /></a>F2 is an open and free <u>web integration framework</u> designed to help the financial services community develop custom web and mobile applications. <b>Build it once, deploy it to any F2-enabled site</b>.</p>
+			<p>
+				<ul class="list">
+					<li>Web container &amp; app framework</li>
+					<li>Simplified integration of multiple parties</li>
+					<li>&ldquo;Context&rdquo;&mdash;pub/sub messaging</li>
+					<li>Bootstrap for RWD &amp; consistent appearance <i>(not themes!)</i></li>
+					<li>On <a href="https://github.com/OpenF2/F2">GitHub.com/OpenF2</a></li>
+				</ul>
+			</p>
+			<h4>Getting Started is Simple</h4>
+			<pre class="prettyprint linenums lang-js">&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/F2/1.3.0/f2.min.js&quot;&gt;&lt;/script&gt;</pre>
+			<h4>Build Your App</h4>
+			<p>Develop HTML, JS, and CSS as you would normally, then create an <code>F2 AppManifest</code> (<a href="http://docs.openf2.org/app-development.html#sample-app-manifest">example</a>).</p>
+			<h4>Register App with F2</h4>
 <pre class="prettyprint linenums lang-js">
 $(function(){
     F2.init();
     F2.registerApps({
-      appId: 'com_your_app',
-      manifestUrl: './appManifest.js'
+      appId: 'com_your_fintech_app',
+      manifestUrl: './appManifest.js' 
     });
 });
 </pre>
+			<p>Find the docs, example containers and apps, and more:<br><a href="http://docs.openf2.org/container-development.html" class="btn btn-default"><i class="fa fa-file-text"></i> docs.openf2.org</a> </p>
 		</div>
 		<div class="span12">
-			<h3 class="page-header">Need Help?</h3>
-			<p>Tweet us <a href="https://twitter.com/markitondemand">@markitondemand</a> with hashtag <code>#fintech</code> with questions or issues using our API.</p>
-			<p><a href="https://twitter.com/intent/tweet?text=%40markitondemand+%23fintech" class="btn btn-default" target="_blank"><i class="fa fa-twitter"></i> Send Tweet</a></p>
+			<h3 class="page-header">Presented by MOD/Labs</h3>
+			<p><a href="http://modl.markit.com"><img src="http://dev.markitondemand.com/Content/images/modl_logo_120.png" align="right" /></a>Our partnership with the FinTech Hackathon is presented by Markit On Demand Labs (MOD/L). <b>MOD/L</b> was founded earlier this year to enhance existing capabilities, create new solutions, and foster innovation across our organization. We recognize that innovation is as much the creation of original ideas as it is the recognition and dissemination of existing progressive concepts and methods within our broader organization.</p>
+			<p>MOD/L is working on range of projects including implementing <b>SPDY</b>, next-generation <b>web &amp; mobile charting</b>, content <b>personalization</b>, and more.</p>
+			<p><a href="http://modl.markit.com" class="btn btn-default"><i class="fa fa-external-link"></i> Learn more</a></p>
+		</div>
+		<div class="span12">
+			<h3 class="page-header">About Markit On Demand</h3>
+			<p><img src="http://content.markitcdn.com/corporate/Content/Images/markit_logo_blue.png" align="right" /><a href="http://www.markitondemand.com">Markit On Demand</a> (MOD), is a design driven technology company based in Boulder, Colorado. We&rsquo;re a Solutions business within <a href="http://www.markit.com">Markit</a>, a global financial information company that&rsquo;s headquartered in London. In Boulder, where the sun shines 300 days a year, we have a team of 400+ professionals dedicated to the presentation of financial content and data for our clients in the Financial Services, Media and Healthcare industries.</p>
+			<h4>We&rsquo;re Hiring</h4>
+			<p><a href="http://jobs.markitondemand.com/#careers" class="btn btn-default btn-info"><i class="fa fa-search"></i> Find Your New Job</a></p>
+		</div>
+		<div class="span12">
+			<h3 class="page-header">Questions?</h3>
+			<p>Tweet us <a href="https://twitter.com/markitondemand">@markitondemand</a> using hashtag <code>#fintech</code> with questions or issues using our API.</p>
+			<p><a href="https://twitter.com/intent/tweet?text=%40markitondemand+%23fintech" class="btn btn-default" target="_blank"><i class="fa fa-twitter"></i> Send Tweet</a>
+				<a href="https://github.com/markitondemand/DataApis/issues?labels=fintechhack&page=1&state=open" class="btn btn-default"><i class="fa fa-github"></i> &lsquo;FinTechHack&rsquo; Issues on GitHub</a></p>
 		</div>
 	</div>
 </div>
